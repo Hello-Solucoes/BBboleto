@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace Ewersonfc\BBboleto\Soap\Clients;
 
@@ -17,8 +17,8 @@ class BoletoClient extends SoapClient
 	{
 	    $wsdl = $oAuthEntity->getEnvironment() == false? Config::WSDL_HM : Config::WSDL_PRODUCTION;
 
-		parent::__construct(null, [			
-			'exceptions' => 0,
+		parent::__construct(null, [
+			'exceptions' => 1,
             'location' => $wsdl,
     		'trace' => 1,
             'uri' => Config::NAMESPACE,
